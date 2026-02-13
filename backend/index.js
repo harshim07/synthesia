@@ -15,7 +15,7 @@ app.use(express.json());
 connectDB();
 app.use(
   cors({
-    origin: "https://synthesia-vert.vercel.app/",
+    origin: "https://synthesia-vert.vercel.app",
     credentials: true,
   }),
 );
@@ -24,4 +24,5 @@ app.use("/api/songs", songRouter);
 app.use("/api/auth", router);
 
 app.listen(PORT, () => console.log(`Server is running on Port ${PORT}`));
+
 
