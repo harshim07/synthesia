@@ -1,0 +1,297 @@
+/* =========================
+   Wrapper
+========================= */
+.editprofile-wrapper {
+  color: #fff;
+  padding: 8px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* =========================
+   Title & Subtitle
+========================= */
+.editprofile-title {
+  margin-bottom: 8px;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, #ffffff, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.editprofile-wrapper p {
+  margin-bottom: 24px;
+  font-size: 15px;
+  color: rgba(209, 213, 219, 1);
+  animation: slideInLeft 0.6s ease-out 0.1s both;
+}
+
+/* =========================
+   Form Layout
+========================= */
+.editprofile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideInUp 0.6s ease-out 0.2s both;
+}
+
+/* =========================
+   Profile Image
+========================= */
+.profile-image-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.profile-image-container:hover {
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.2);
+}
+
+.profile-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(209, 213, 219, 1);
+}
+
+/* Upload Icon */
+.image-upload-icon {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgb(147, 51, 234), rgb(236, 72, 153));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.4);
+  transition: all 0.3s ease;
+}
+
+.image-upload-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.7);
+}
+
+/* =========================
+   Error Message
+========================= */
+.editprofile-error {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(252, 165, 165, 1);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: shakeError 0.5s ease-out;
+}
+
+/* =========================
+   Password Toggle
+========================= */
+.editprofile-password-toggle {
+  margin-top: 4px;
+  align-self: flex-start;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(168, 85, 247);
+  cursor: pointer;
+}
+
+/* =========================
+   Actions
+========================= */
+.editprofile-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Cancel Button */
+.editprofile-btn-cancel {
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.editprofile-btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.editprofile-btn-cancel:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Submit Button */
+.editprofile-btn-submit {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: white;
+  background: linear-gradient(to right, rgb(147, 51, 234), rgb(236, 72, 153));
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.4);
+}
+
+.editprofile-btn-submit:active {
+  transform: scale(0.95) translateY(0);
+}
+
+.editprofile-btn-submit span {
+  position: relative;
+  z-index: 1;
+}
+
+.editprofile-btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.2);
+}
+
+.editprofile-btn-submit:disabled:hover {
+  transform: translateY(0);
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.2);
+}
+
+.editprofile-btn-submit:disabled::before {
+  opacity: 0;
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shakeError {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .editprofile-wrapper {
+    padding: 4px;
+  }
+
+  .editprofile-title {
+    font-size: 24px;
+  }
+
+  .editprofile-wrapper p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .editprofile-form {
+    gap: 16px;
+  }
+
+  .editprofile-btn-submit {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .editprofile-title {
+    font-size: 22px;
+  }
+
+  .editprofile-wrapper p {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .profile-image-container {
+    height: 80px;
+    width: 80px;
+  }
+
+  .editprofile-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .editprofile-btn-cancel,
+  .editprofile-btn-submit {
+    width: 100%;
+  }
+}
